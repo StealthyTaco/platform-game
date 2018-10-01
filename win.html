@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Win </title>
+    <script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+    <script>
+        function start() {
+            sjs.open();
+
+            var win_txt = new sjs.Text("You Won!", 40, "lime");
+            win_txt.center().offset(0, -50);
+
+            var menuBtn = new sjs.Button("Main Menu", function () {
+                window.location = "index.html";
+            });
+            menuBtn.center();
+
+            var score_txt = new sjs.Text("Score: 0", 20, "lime");
+            score_txt.setText("Score: " + localStorage.getItem("score"));
+
+        }
+
+
+    </script>
+</head>
+
+<body style=background-color:black onload="start()">
+    <h1 style=color:lime> You Win </h1>
+
+    <div id="target" style="margin:auto;background:black;"></div>
+</body>
+
+</html>
